@@ -27,10 +27,10 @@ This demo automatically deploys the topology of services as defined in the [Debe
 ```shell
 # Start the topology as defined in https://debezium.io/documentation/reference/stable/tutorial.html
 export DEBEZIUM_VERSION=2.1
-docker-compose -f docker-compose-mysql.yaml up
+docker-compose -f docker-compose-mysql-avro-worker-kappa.yaml up -d
 
 # Start MySQL connector
-curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @register-mysql.json
+curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @register-mysql-avro-kappa.json
 
 # Consume messages from a Debezium topic
 docker-compose -f docker-compose-mysql.yaml exec kafka /kafka/bin/kafka-console-consumer.sh \

@@ -1,0 +1,54 @@
+{
+    "type": "record",
+    "name": "raw_events_sample_value",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "created_at",
+            "type": "float"
+        },
+        {
+            "name": "received_at",
+            "type": "float"
+        },
+        {
+            "name": "md5",
+            "type": "string"
+        },
+        {
+            "name": "websiteid",
+            "type": "string"
+        },
+        {
+            "name": "deviceid",
+            "type": "string"
+        },
+        {
+            "name": "source",
+            "type": "string"
+        },
+        {
+            "name": "version",
+            "type": "string"
+        },
+        {
+            "name": "original_http_request_uri",
+            "type": "string"
+        },
+        {
+            "name": "ip",
+            "type": "string"
+        },
+        {
+            "name": "user_agent",
+            "type": "string"
+        }
+    ]
+}

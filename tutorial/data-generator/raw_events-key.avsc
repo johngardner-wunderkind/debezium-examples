@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "name": "raw_events_sample_key",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        }
+    ]
+}
