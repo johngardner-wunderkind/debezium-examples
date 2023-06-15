@@ -50,7 +50,8 @@ def gen_raw_event():
     INSERT INTO sub_unsub_events (id, name, created_at, received_at, md5, websiteid, 
       deviceid, source, version, og_uri, ip, user_agent)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    ON DUPLICATE KEY UPDATE name = VALUES(name), created_at = VALUES(created_at), received_at = VALUES(received_at)
+    ON DUPLICATE KEY UPDATE name = case when name = 'unsubscribe' then 'optin_granted' else 'unsubscribe' end, 
+     created_at = VALUES(created_at), received_at = VALUES(received_at)
     """
 
     val = (
