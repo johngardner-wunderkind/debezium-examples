@@ -96,7 +96,7 @@ services:
 #    networks:
 #      - redpanda_network
     environment:
-     - MYSQL_DATABASE=db
+     - MYSQL_DATABASE=user_history
      - MYSQL_ROOT_PASSWORD=debezium
      - MYSQL_USER=mysqluser
      - MYSQL_PASSWORD=mysqlpw
@@ -146,8 +146,8 @@ services:
         sleep infinity
 
   data-generator:
-    build: ./data-generator
-    container_name: data-generator
+    build: ./data-generator-sub-unsub
+    container_name: data-generator-sub-unsub
 #    networks:
 #      - redpanda_network
     depends_on:

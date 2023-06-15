@@ -40,7 +40,7 @@ docker-compose -f docker-compose-mysql.yaml exec kafka /kafka/bin/kafka-console-
     --topic dbserver1.inventory.customers
 
 # Modify records in the database via MySQL client
-docker-compose -f docker-compose-mysql.yaml exec mysql bash -c 'mysql -u $MYSQL_USER -p$MYSQL_PASSWORD inventory'
+docker-compose -f docker-compose-mysql.yaml exec mysql bash -c 'mysql -u root -pdebezium user_history'
 
 # Shut down the cluster
 docker-compose -f docker-compose-mysql.yaml down

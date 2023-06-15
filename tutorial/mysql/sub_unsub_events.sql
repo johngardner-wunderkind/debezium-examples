@@ -1,6 +1,6 @@
-use db;
+use user_history;
 
- CREATE TABLE raw_events (
+ CREATE TABLE sub_unsub_events (
     id VARCHAR(100),
     name VARCHAR(20),
     created_at BIGINT,
@@ -12,5 +12,6 @@ use db;
     version VARCHAR(5),
     og_uri VARCHAR(50),
     ip VARCHAR(20),
-    user_agent VARCHAR(50)
+    user_agent VARCHAR(50),
+    PRIMARY KEY (id)
 );
